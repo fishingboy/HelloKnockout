@@ -1,0 +1,14 @@
+<script src="https://knockoutjs.com/downloads/knockout-3.5.1.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<div data-bind="visible: myValues().length > 0">
+    You will see this message only when 'myValues' has at least one member.
+</div>
+
+<script type="text/javascript">
+    var viewModel = {
+        myValues: ko.observableArray([]) // Initially empty, so message hidden
+    };
+    viewModel.myValues.push("some value"); // Now visible
+    ko.applyBindings(viewModel);
+</script>

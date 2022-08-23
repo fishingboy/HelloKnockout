@@ -1,0 +1,14 @@
+<script src="https://knockoutjs.com/downloads/knockout-3.5.1.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+Today's message is: <span data-bind="text: myMessage">22</span>
+
+<script type="text/javascript">
+    $(function () {
+        var viewModel = {
+            myMessage: ko.observable() // Initially blank
+        };
+        ko.applyBindings(viewModel);
+        viewModel.myMessage("Hello, world!"); // Text appears
+    });
+</script>
